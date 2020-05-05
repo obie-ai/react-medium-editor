@@ -1,13 +1,12 @@
 {
-  "name": "react-medium-editor",
+  "name": "@alexsopinka/react-medium-editor",
   "version": "1.8.1",
   "description": "React wrapper for medium-editor",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
-    "test": "jest --coverage",
-    "prepublishOnly": "npm test && npm run build",
+    "prepublishOnly": "npm run build",
     "watch": "rollup -cw"
   },
   "repository": {

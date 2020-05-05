@@ -12,10 +12,6 @@ export default class ReactMediumEditor extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      text: this.props.text
-    };
   }
 
   componentDidMount() {
@@ -36,14 +32,6 @@ export default class ReactMediumEditor extends React.Component {
     this.medium.destroy();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.text !== this.state.text && !this._updated) {
-      this.setState({ text: nextProps.text });
-    }
-
-    if (this._updated) this._updated = false;
-  }
-
   render() {
     const {
       options,
@@ -53,7 +41,7 @@ export default class ReactMediumEditor extends React.Component {
       dangerouslySetInnerHTML,
       ...props
     } = this.props;
-    props.dangerouslySetInnerHTML = { __html: this.state.text };
+    props.dangerouslySetInnerHTML = { __html: text };
 
     if (this.medium) {
       this.medium.saveSelection();
