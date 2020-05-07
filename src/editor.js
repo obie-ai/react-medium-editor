@@ -32,6 +32,10 @@ export default class ReactMediumEditor extends React.Component {
     this.medium.destroy();
   }
 
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     const {
       options,
