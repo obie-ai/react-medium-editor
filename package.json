@@ -1,6 +1,6 @@
 {
   "name": "@alexsopinka/react-medium-editor",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "React wrapper for medium-editor",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",

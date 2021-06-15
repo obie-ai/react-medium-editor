@@ -29,7 +29,9 @@ export default class ReactMediumEditor extends React.Component {
   }
 
   componentWillUnmount() {
-    this.medium.destroy();
+    if (!this.props.forceDestroy) {
+      this.medium.destroy();
+    }
   }
 
   shouldComponentUpdate() {
